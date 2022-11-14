@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>Wallet</title>
+      <link rel="stylesheet" href="../static/css/dstyle.css">
+      <script src="../static/script/script2.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src=
+         "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+   </head>
+   <body >
+      <div class="menu">
+         <ul>
+            <li><a href="home"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="expenditure"><i class="fa fa-money"></i>Expenditure</a></li>
+            <li><a href="wallet"><i class="fa fa-google-wallet" aria-hidden="true"></i></i>Wallet</a></li>
+            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>logout</a></li>
+         </ul>
+      </div>
+      <div>
+         <div class="btn">
+            <input type="number" id="balance" placeholder="0.0₹" name="amount" value="">
+            <left><input type = "button" class="button" value = "ADD MONEY" onclick = "bal()" /></left>
+         </div>
+         <div class="img">
+           <img src="../static/img/wallet.png" alt="WALLET" width="300" height="350">
+                     
+            <h1> <span id="bal" style="color:rgb(61, 255, 55);">0</span>₹</h1>
+         </div>
+        <div class="limit">
+        <h1>SET MONTHLY Limit</h1>
+        <input type="number" id="limit" placeholder="0.0₹" >
+            <left><input type = "button" class="button" value = "SET LIMIT" onclick = "fun()" />  </left>
+            <h1 >YOUR MONTHLY LIMIT <span id="lim" style="color:red;"> 0</span>₹</h1>
+            
+       
+      </div>
+    </div>
+
+      
+   </body>
+</html>

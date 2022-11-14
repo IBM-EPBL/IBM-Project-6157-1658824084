@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Expenditure</title>
+        <link rel="stylesheet" href="../static/css/dstyle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../static/css/style1.css">
+    </head>
+    <body>
+        
+     <div class="menu">
+       
+        
+        <ul>
+            
+            <li><a href="home"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="expenditure"><i class="fa fa-money"></i>Expenditure</a></li>
+            <li><a href="wallet"><i class="fa fa-google-wallet" aria-hidden="true"></i></i>Wallet</a></li>
+            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>logout</a></li>
+        </ul>
+       
+     </div>
+
+     
+    <div class="container">
+        <h1>Your Balance</h1>
+        <h1 id="balance"></h1>
+
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus">₹0.00</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money minus">₹0.00</p>
+            </div>
+        </div>
+
+        
+
+        <h3>Add new transaction</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Expenditure Type</label><br>
+                <input type="text" id="text" placeholder="Enter Expen..." />
+            </div>
+            <div class="form-control">
+                <label for="amount"
+                >Amount 
+                </label><br>
+            <input type="number" id="amount" placeholder="Enter amount..." /><button class="btf">Add</button><br>
+            </div>
+            
+            <br><br>
+        </form>
+        
+    </div>
+    <div class="container2">
+        <h3>History</h3>
+        <ul id="list" class="list">
+
+        </ul>
+
+
+    </div>
+    <div class="container3">
+        <h3>History</h3>
+        <ul id="list" class="list">
+
+        </ul>
+
+
+    </div>
+    
+    
+
+    <script src="../static/script/script2.js"></script>
+
+
+    </body>
+</html>
