@@ -1,0 +1,85 @@
+<html>
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          
+          <form action="/register" method="post" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+
+        <div class="msg">{{ msg }}</div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" name="username" placeholder="Enter Your Username"  id="username" required></br></br>
+			
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" placeholder="Enter Your Email ID"  id="email" required></br></br>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Enter Your Password" id="password" required></br></br>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="confirm_password" placeholder="confirm Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Why don't you join with us!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Welcome back! login using your exising credential.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+
+    window.onload = function(){
+      container.classList.add("sign-up-mode");
+    };
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+      window.open("login")
+    });
+
+
+  </script>
+<script>var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;</script>
+</html>
