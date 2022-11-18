@@ -202,7 +202,7 @@ def expenditure():
 		expense=username.get("EXPENSE")	
 		limit=username.get("LIMIT")
 		if expense > limit:
-			sg = sendgrid.SendGridAPIClient(api_key='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')
+			sg = sendgrid.SendGridAPIClient(api_key='{{api key}}')
 			dat = {
               "personalizations": [
                 {
@@ -215,7 +215,7 @@ def expenditure():
                 }
               ],
               "from": {
-                "email": "sathesh9988@gmail.com"
+                "email": "{{sender mail}}"
               },
               "content": [
                 {
