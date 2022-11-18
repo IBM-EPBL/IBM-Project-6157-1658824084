@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>login form</title>
+  
+  <link rel="stylesheet" href="../static/css/style2.css" />
+</head>
+
+        
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="/login" method="POST" class="sign-in-form">
+            <h2 class="title">Log in</h2>
+
+        <div class="msg">{{ msg }}</div>
+            <div class="input-field">
+              
+              <i class="fas fa-user"></i>
+              <input type="text" name="email" placeholder="Enter Your Email Id"  id="email" required></br></br>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Enter Your Password" id="password" required></br></br>
+            </div>
+            <button type="submit" id="button" class="btn btn-primary"> Login </button>
+          </form>
+          
+          
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Why don't you join with us!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+      window.open("register")
+    });
+
+    
+  
+
+    
+  </script>
+
+</html>
